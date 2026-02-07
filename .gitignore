@@ -1,0 +1,8 @@
+node_modules/
+.env
+build/
+dist/
+.env
+.env.*
+single agent/.env.example
+single agent/.env

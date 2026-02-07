@@ -1,0 +1,14 @@
+{
+  "age": 30,
+  "chief_complaint": "minor laceration",
+  "time_since_onset": "1 hour",
+  "consciousness_level": "alert",
+  "vital_signs": {
+    "heart_rate": 76,
+    "respiratory_rate": 14,
+    "blood_pressure_systolic": 120,
+    "blood_pressure_diastolic": 78,
+    "o2_saturation": 98,
+    "temperature": 36.6
+  }
+}

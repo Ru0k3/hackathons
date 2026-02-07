@@ -1,0 +1,14 @@
+{
+  "age": 78,
+  "chief_complaint": "shortness of breath",
+  "time_since_onset": "30 minutes",
+  "consciousness_level": "reduced",
+  "vital_signs": {
+    "heart_rate": 145,
+    "respiratory_rate": 32,
+    "blood_pressure_systolic": 82,
+    "blood_pressure_diastolic": 48,
+    "o2_saturation": 82,
+    "temperature": 37.8
+  }
+}
