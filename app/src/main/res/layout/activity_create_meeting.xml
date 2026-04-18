@@ -10,19 +10,30 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:text="Create Meeting"
+            android:text="Request Meeting"
             android:textSize="22sp"
             android:textStyle="bold"
             android:layout_marginBottom="16dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
+        <!-- User B Gmail -->
         <EditText
-            android:id="@+id/etSlackId"
-            android:hint="Other User Slack ID"
+            android:id="@+id/etUserBGmail"
+            android:hint="User B Gmail ID"
+            android:inputType="textEmailAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
+        <!-- Subject -->
+        <EditText
+            android:id="@+id/etSubject"
+            android:hint="Meeting Subject"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- Duration -->
         <EditText
             android:id="@+id/etDuration"
             android:hint="Meeting Duration (minutes)"
@@ -31,10 +42,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
+        <!-- Available Time -->
         <EditText
             android:id="@+id/etAvailability"
-            android:hint="Your Available Time (e.g. Mon 2-5pm)"
-            android:minLines="3"
+            android:hint="Your Available Time (e.g. Mon 2–5 PM)"
+            android:minLines="2"
+            android:gravity="top"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- Description -->
+        <EditText
+            android:id="@+id/etDescription"
+            android:hint="Meeting Description"
+            android:minLines="4"
             android:gravity="top"
             android:layout_marginTop="12dp"
             android:layout_width="match_parent"
