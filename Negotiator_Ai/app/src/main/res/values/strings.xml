@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">My Application</string>
+
+    <string-array name="time_preferences">
+        <item>morning</item>
+        <item>afternoon</item>
+        <item>evening</item>
+        <item>any</item>
+    </string-array>
+
+    <string-array name="duration_preferences">
+        <item>15</item>
+        <item>30</item>
+        <item>45</item>
+        <item>60</item>
+    </string-array>
+
+    <string-array name="flexibility_preferences">
+        <item>strict</item>
+        <item>flexible</item>
+        <item>very_flexible</item>
+    </string-array>
+</resources>
