@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-canvas:  #EDE8DF;
+    --color-surface: #E6E1D8;
+    --color-card:    #F7F3EE;
+    --color-ink:     #1C1916;
+    --color-gold:    #C8A97E;
+    --color-taupe:   #8C7B6B;
+    --color-muted:   #9E9189;
+    --color-divider: #D9D3C8;
+    --color-ok:      #7BAE8E;
+    --color-danger:  #C47B72;
+  }
+
+  .dark {
+    --color-canvas:  #1C1916;
+    --color-surface: #26211D;
+    --color-card:    #2E2822;
+    --color-ink:     #EDE8DF;
+    --color-muted:   #6B5E54;
+    --color-divider: #3A332C;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-canvas text-ink font-sans antialiased;
+  }
+
+  button, input, select, textarea {
+    font-family: inherit;
+  }
+
+  /* Focus ring */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-gold;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-chip bg-ink text-white px-7 py-3 text-2xs font-bold tracking-widest uppercase cursor-pointer border-0 transition-opacity hover:opacity-80 disabled:opacity-40 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 rounded-chip bg-card text-ink border border-divider px-7 py-3 text-2xs font-bold tracking-widest uppercase cursor-pointer transition-opacity hover:opacity-80;
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center gap-2 rounded-chip bg-gold text-white px-7 py-3 text-2xs font-bold tracking-widest uppercase cursor-pointer shadow-gold transition-opacity hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 rounded-chip text-taupe px-4 py-2 text-2xs font-bold tracking-widest uppercase cursor-pointer hover:bg-brand-100 transition-colors border-0 bg-transparent;
+  }
+
+  .btn-danger {
+    @apply inline-flex items-center gap-2 rounded-chip bg-danger text-white px-7 py-3 text-2xs font-bold tracking-widest uppercase cursor-pointer transition-opacity hover:opacity-80;
+  }
+
+  .card {
+    @apply bg-card border border-divider rounded-card p-8 shadow-card;
+  }
+
+  .badge {
+    @apply inline-block bg-gold/10 text-gold text-2xs font-bold tracking-widest uppercase px-3 py-1 rounded-chip;
+  }
+
+  .input {
+    @apply w-full bg-surface border border-divider rounded-xl px-4 py-3 text-sm text-ink placeholder:text-muted focus:outline-none focus:border-gold transition-colors;
+  }
+
+  .label {
+    @apply block text-2xs font-bold tracking-widest uppercase text-taupe mb-2;
+  }
+
+  .section-heading {
+    @apply font-display text-3xl text-ink;
+  }
+
+  .page-container {
+    @apply max-w-6xl mx-auto px-10 py-12;
+  }
+
+  .onboarding-page {
+    @apply min-h-screen bg-canvas text-ink flex flex-col items-center justify-center gap-8 px-6 py-12;
+  }
+
+  .onboarding-page section {
+    @apply w-full max-w-2xl text-center;
+  }
+
+  .onboarding-page h2 {
+    @apply font-display text-4xl mb-8;
+  }
+
+  .onboarding-steps {
+    @apply flex flex-wrap items-center justify-center gap-2;
+  }
+
+  .onboarding-step {
+    @apply rounded-chip border border-divider bg-card px-4 py-2 text-2xs font-bold uppercase tracking-widest text-muted;
+  }
+
+  .onboarding-step.active {
+    @apply border-gold bg-gold/10 text-gold;
+  }
+
+  .onboarding-step.done {
+    @apply border-ok bg-ok/10 text-ok;
+  }
+
+  .option-grid,
+  .palette-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 gap-4;
+  }
+
+  .option-btn,
+  .palette-btn,
+  .tag-btn {
+    @apply rounded-card border border-divider bg-card px-5 py-4 text-sm font-bold text-ink shadow-card transition-all hover:border-gold hover:-translate-y-0.5;
+  }
+
+  .option-btn.selected,
+  .palette-btn.selected,
+  .tag-btn.selected {
+    @apply border-gold bg-gold/10 text-gold shadow-gold;
+  }
+
+  .palette-btn {
+    @apply flex flex-col items-center gap-3;
+  }
+
+  .swatches {
+    @apply flex justify-center gap-2;
+  }
+
+  .swatches span {
+    @apply h-8 w-8 rounded-full border border-white/60 shadow-sm;
+  }
+
+  .tag-cloud {
+    @apply flex flex-wrap justify-center gap-3;
+  }
+}
+
+/* Wardrobe item hover utility */
+.wardrobe-card:hover .wardrobe-actions {
+  opacity: 1 !important;
+}
+.saved-card:hover .saved-actions {
+  opacity: 1 !important;
+}
