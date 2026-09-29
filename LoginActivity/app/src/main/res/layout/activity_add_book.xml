@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="?android:attr/windowBackground">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Book Details"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="?android:attr/textColorPrimary"
+        android:layout_marginBottom="20dp" />
+
+    <EditText
+        android:id="@+id/edtAddTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Title"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textColorHint="?android:attr/textColorSecondary"
+        android:backgroundTint="?android:attr/textColorPrimary" />
+
+    <EditText
+        android:id="@+id/edtAddAuthor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Author"
+        android:layout_marginTop="10dp"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textColorHint="?android:attr/textColorSecondary"
+        android:backgroundTint="?android:attr/textColorPrimary" />
+
+    <EditText
+        android:id="@+id/edtAddDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Description"
+        android:layout_marginTop="10dp"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textColorHint="?android:attr/textColorSecondary"
+        android:backgroundTint="?android:attr/textColorPrimary" />
+
+    <EditText
+        android:id="@+id/edtAddImageUrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Image URL"
+        android:layout_marginTop="10dp"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textColorHint="?android:attr/textColorSecondary"
+        android:backgroundTint="?android:attr/textColorPrimary" />
+
+    <Button
+        android:id="@+id/btnSaveBook"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:text="SAVE BOOK"
+        android:backgroundTint="#004AAD"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>
